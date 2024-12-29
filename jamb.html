@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jamb</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
+</head>
+<body>
+
+
+    <script>
+        const resultsList = document.getElementById('results')
+        new URLSearchParams(window.location.search).forEach((value,
+    
+            name) => {
+    
+                resultsList.append(`${name}: ${value}`)
+                resultsList.append(document.createElement('br'))
+            })
+    </script>
+
+    <div class="container">
+        <div class="logo">
+            <div>
+                <img src="./assets/logo_big.png">
+            </div>
+        </div>
+        <div class="main">
+            <div class="info">
+                <form action="./index.html" enctype="multipart/form-data" method="get">
+                    <div class="text">
+                        <h3 style="font-weight: 330;">Login to your account</h3>
+                    </div>
+                    <div class="ema">
+                        <span class="material-symbols-outlined envelop">
+                            email
+                            </span>
+                        <input id="email" name="Email" type="email" required placeholder="e-Mail Address" class="up">
+                    </div>
+                    <div class="pass">
+                        <span class="material-symbols-outlined padlock">
+                            lock
+                        </span>
+                        <input id="password" name="Password" type="password" required placeholder="Password" class="down">
+                    </div>
+                    <div>
+                        <input value="Login" name="Login" type="submit" class="button">
+                    </div>
+                    <div class="link">
+                        <a href="#">Forgot your Password? Click here  to reset it</a>
+                    </div>
+                    <div class="metoo">
+                        <p>Don't have an account yet?</p>
+                        <button type="submit">Create an account</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="end">
+            <div>
+                <footer><small>2024 © Joint Admissions and Matriculation Board (JAMB)</small></footer>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <style>
+
+        *{ 
+            box-sizing: border-box;
+            padding: 0%;
+            margin: 0%;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-image: url(./assets/back1.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .logo {
+            height: 34vh;
+            background: transparent;
+            display: flex;
+            justify-content: center;
+        }
+        .logo > div {
+            align-self: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        .main {
+            height: 59vh;
+            background: transparent;
+            display: flex;
+        }
+        .info {
+            box-shadow: 0px 0px 10px -3px;
+            height: 100%;
+            flex-grow: 0;
+            flex-shrink: o;
+            min-width: 26%;
+            margin-left: 37%;
+        }
+        .info > form {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            height: 95%;
+            margin: 5%;
+        }
+        .info input {
+            width: 100%;
+            height: 40px;
+            border: none;
+            outline: none;
+        }
+        .end {
+            height: 7vh;
+            background: transparent;
+            color: #235b2b;
+            display: flex;
+            justify-content: center;
+        }
+        .end > div {
+            align-self: center;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+        .text {
+            margin-top: 30px;
+            font-size: 24px;
+        }
+        .link {
+            text-align: center;
+        }
+        .button {
+            background-color: #428bca;
+            border-color: #357ebd;
+            color: white;
+            cursor: pointer;
+        }
+        a {
+            text-decoration: none;
+            color: #5b9bd1;
+        }
+        .metoo {
+            display: flex;
+            justify-content: center;
+        }
+        .metoo > * {
+            height: 40px;
+            width: 60%;
+            border: none;
+            margin: 10px;
+        }
+        .metoo > button {
+            background-color: #89C4F4;
+            border-color: #72b8f2;
+            color: white;
+            cursor: pointer;
+        }
+        ::placeholder {
+            opacity: 0.4;
+            font-size: 1rem;
+        }
+
+        .pass {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .pass > .padlock {
+            position: absolute;
+            left: 10px;
+            font-size: 1rem;
+            opacity: 0.4;  
+        }
+        .ema {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .ema > .envelop {
+            position: absolute;
+            left: 10px;
+            font-size: 1rem;
+            opacity: 0.4;
+        }
+        .up {
+            padding-left: 30px;
+        }
+        .down {
+            padding-left: 30px;
+        }
+
+        
+       
+    </style>
+
+</body>
+</html>
+@media (max-width: 600px) {
+    .info {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+
